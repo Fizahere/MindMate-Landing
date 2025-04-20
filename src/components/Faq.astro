@@ -1,0 +1,78 @@
+---
+const faqs = [
+    {
+        ques: "What if MindMate isn't right for me",
+        answer: "MindMate is built to support people from all walks of life. Whether you're looking for daily check-ins, emotional support, or tools to manage stress and anxiety, MindMate is designed to adapt to your needs and preferences.",
+    },
+    {
+        ques: "Can I use MindMate without any therapy experience?",
+        answer: "Absolutely. You don't need any background in therapy to benefit from MindMate. It’s designed to be intuitive, friendly, and supportive — whether you're exploring mental health tools for the first time or looking for extra support between sessions.",
+    },
+    {
+        ques: "Is MindMate a replacement for a real therapist?",
+        answer: "MindMate isn’t meant to replace a licensed professional. It’s here to complement your journey — offering 24/7 support, coping strategies, and guidance when you need someone to talk to between sessions or on your own terms.",
+    },
+    {
+        ques: "Is it really free to start?",
+        answer: "Yes! You can start using MindMate for free without a credit card. Explore the features, try out a few sessions, and continue whenever you're ready — no pressure.",
+    },
+];
+---
+
+<section class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50" id='faq'>
+    <div class="max-w-7xl mx-auto">
+        <!-- FAQ Heading -->
+        <h2 class="text-2xl font-bold text-center mb-10">FAQ</h2>
+
+        <!-- FAQ Grid -->
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
+            <!-- Question 1 -->
+            {
+                faqs.map((faq, index) => (
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-gray-400 mb-2">0{index+1}</div>
+                        <h3 class="font-semibold text-lg mb-2">{faq?.ques}</h3>
+                        <p class="text-gray-600 text-sm">{faq?.answer}</p>
+                    </div>
+                ))
+            }
+        </div>
+
+        <!-- CTA Banner -->
+        <div
+            class="bg-blue-500 rounded-2xl p-8 text-white flex flex-col md:flex-row items-center justify-between overflow-hidden relative"
+        >
+            <div class="md:max-w-md z-10">
+                <h3 class="text-2xl font-bold mb-4">
+                    Take the First Step Toward Better Mental Health with
+                    AI-Powered Support
+                </h3>
+                <p class="mb-6 text-blue-100">
+                    Get started for free anytime. No pressure, no credit card
+                    needed.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a
+                        href="https://usemindmate.streamlit.app"
+                        target="_blank"
+                        class="inline-flex items-center justify-center px-6 py-2 bg-white text-blue-600 rounded-full text-sm font-medium hover:bg-blue-50 transition-colors"
+                    >
+                        Preview a Demo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Robot Hand Image -->
+            <div
+                class="mt-8 md:mt-0 md:absolute md:right-0 md:bottom-0 md:w-1/3 lg:w-2/5"
+            >
+                <img
+                    src="/public/image2.png"
+                    alt="AI Robot Hand"
+                    class="w-full h-auto"
+                    onerror="this.src='/placeholder.svg?height=200&width=200'; this.onerror=null;"
+                />
+            </div>
+        </div>
+    </div>
+</section>
